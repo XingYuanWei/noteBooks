@@ -1,4 +1,4 @@
-# Linked List Traversal
+# 2 Linked List Traversal
 
 
 # Traversal
@@ -15,7 +15,7 @@
     { 
       while (n != NULL) 
       { 
-         printf(" %d ", n->data); 
+         printf("%d->", n->data); 
          n = n->next; 
       } 
     }  

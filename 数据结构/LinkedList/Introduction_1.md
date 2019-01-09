@@ -1,4 +1,4 @@
-# Introduction
+# 1 Introduction
 
 
 ## 什么是Linked List  
