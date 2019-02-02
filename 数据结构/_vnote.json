@@ -15,6 +15,9 @@
     "sub_directories": [
         {
             "name": "LinkedList"
+        },
+        {
+            "name": "DoubleLinkedList"
         }
     ],
     "version": "1"
