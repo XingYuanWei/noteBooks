@@ -18,6 +18,9 @@
         },
         {
             "name": "DoubleLinkedList"
+        },
+        {
+            "name": "Stack"
         }
     ],
     "version": "1"
