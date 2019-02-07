@@ -13,4 +13,81 @@
 #### ④ isEmpty：如果栈为空则返回真，否则返回假。
 
 >push，pop，isEmpty，peek这些操作的时间复杂度都为O(1)，这些操作我们不需要做任何的循环。
->
+>栈的实现有两种方式，第一种为使用数组，第二种为使用Linked List。下面代码使用的是Array。
+
+
+```c++
+    #include <iostream>
+
+    using namespace std;
+
+    #define MAX 10000
+
+    class Stack
+    {
+    public:
+    	int a[MAX];
+    	Stack();
+    	~Stack();
+    	int pop();
+    	bool push(int x);
+    	bool isEmpty();
+
+    private:
+    	int top;
+    };
+
+    Stack::Stack()
+    {
+    	top = -1;
+    }
+
+    Stack::~Stack()
+    {
+    }
+
+    int Stack::pop()
+    {
+    	if (top < 0)
+    	{
+    		cout << "Stack Underflow" ;
+    		return false;
+    	}
+    	else
+    	{
+    		int x = a[top--];
+    		return x;
+    	}
+    }
+
+    bool Stack::push(int x)
+    {
+    	if (top >= (MAX - 1))
+    	{
+    		cout << "Stack Overflow";
+    		return false;
+    	}
+    	else
+    	{
+    		a[++top] = x;
+    		cout << x << "push into stack\n";
+    		return true;
+    	}
+    }
+
+    bool Stack::isEmpty()
+    {
+    	return top < 0;
+    }
+
+
+    int main() {
+    	class Stack stack;
+    	stack.push(10);
+    	stack.push(20);
+    	stack.push(30);
+    	cout << stack.pop() << "popped from stack\n";
+    	return 0;
+    }
+```
+
