@@ -156,7 +156,73 @@
 ![倒置DLL的结果](_v_images/20190225224435276_25811.png)
 
 ## 步骤详解
+![图一](_v_images/20190226104153141_15212.png)
 
+![图二](_v_images/20190226104206802_28515.png)
+
+![图三](_v_images/20190226104222224_6722.png)
+
+![图四](_v_images/20190226104232988_3412.png)
 ## 分析
->该倒置的方法即把DLL中所有的节点的prev指针和next指针交换指向的节点即可，
+>该倒置的方法即把DLL中所有的节点的prev指针和next指针交换指向的节点即可。值得解释的是，在循环中语句的循序如下：
+
+```c++
+    while(current != NULL){
+            temp = current->prev;
+    		current->prev = current->next;
+    		current->next = temp;
+    		//指针向下移动一个节点
+    		current = current->prev;
+		}
+		//before changing head,check for the cases
+    	//like empty list and list with only one node
+    	if (temp != NULL)
+    	{
+
+    		*head_ref = temp->prev;
+    	}
+```
+>如果改变了上面语句的循序，先交换next节点，即如下语句
+
+```c++
+    while(current != NULL){
+            temp = current->next
+            current->next = current->prev;
+            current->prev = temp;
+            //指针向下移动一个节点
+            current = current->prev
+        }
+        *head_ref = current;
+```
+>由于循环语句的结束条件是current != NULL，所以当循环条件退出的时候，那么此时的current指针必然指向一个NULL
+>所以此时最后一句*head_ref = current是不运行的，所以程序在打印的时候会出错。
+>正确的修改方式如下，记录下每次的节点，直到循环退出的时候则该将头指针指向最后一个节点。代码如下
+
+```c++
+    void reverseDLL(Node ** head_ref)
+    {
+    	struct Node* temp = NULL;
+    	struct Node* current = *head_ref;
+    	struct Node* last = NULL;
+    	//swap next pointer and prev pointer
+    	//for all nodes of DLL
+    	while (current != NULL)
+    	{
+    		temp = current->next;
+    		current->next = current->prev;
+    		current->prev = temp;
+    		last = current;
+    		//指针向前移动一个节点
+    		current = current->prev;
+    	}
+    	//before changing head,check for the cases
+    	//like empty list and list with only one node
+    	if (last != NULL)
+    	{
+    		*head_ref = last;
+    	}
+
+}
+```
+
 
