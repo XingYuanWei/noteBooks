@@ -21,6 +21,9 @@
         },
         {
             "name": "Stack"
+        },
+        {
+            "name": "Hashing Data Structure"
         }
     ],
     "version": "1"
