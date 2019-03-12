@@ -1,0 +1,7 @@
+vnote_backup_file_826537664 F:/VNote/DataStructure/Hashing Data Structure/Open Addressing Hashing.md
+# Open Addressing
+> 像使用分离链表一样，开放寻址也是一个处理碰撞的方法。在开放寻址中，所有的元素都能存储在
+> hash table中，所有在任何时候，表的大小一定要大于或等于键的总数。
+
+insert(k)：持续搜索直到发现新的空插槽，一旦发现一个新的空插槽，则插入k  
+search(k)：持续搜索知道
