@@ -36,7 +36,8 @@
     private:
     	int top;
     };
-
+    
+    //initialize stack
     Stack::Stack()
     {
     	top = -1;

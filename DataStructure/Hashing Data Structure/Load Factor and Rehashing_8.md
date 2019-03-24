@@ -188,93 +188,88 @@
 
 
 ## 运行结果
-> HashMap created
-> Number of pairs in the Map: 0
-> Size of Map: 5
-> Default Load Factor : 0.75
-> 
-> Pair(1,Geeks)inserted successfully
-> The Load_Factor is：0.2
-> Number of pairs in the Map: 1
-> Size of Map: 5
-> 
-> Current HashMap:
-> key = 1, val = Geeks
-> 
-> Pair(2,forGeeks)inserted successfully
-> The Load_Factor is：0.4
-> Number of pairs in the Map: 2
-> Size of Map: 5
-> 
-> Current HashMap:
-> key = 1, val = Geeks
-> key = 2, val = forGeeks
-> 
-> Pair(3,A)inserted successfully
-> The Load_Factor is：0.6
-> Number of pairs in the Map: 3
-> Size of Map: 5
-> 
-> Current HashMap:
-> key = 1, val = Geeks
-> key = 2, val = forGeeks
-> key = 3, val = A
-> 
-> Pair(4,Computer)inserted successfully
-> The Load_Factor is：0.8
-> 0.8 is greater than 0.75
-> Therefore Rehashing will be done.
-> 
-> 
-> ***Rehashing Started***
-> 
-> Pair(1,Geeks)inserted successfully
-> The Load_Factor is：0.1
-> Number of pairs in the Map: 1
-> Size of Map: 10
-> 
-> Pair(2,forGeeks)inserted successfully
-> The Load_Factor is：0.2
-> Number of pairs in the Map: 2
-> Size of Map: 10
-> 
-> Pair(3,A)inserted successfully
-> The Load_Factor is：0.3
-> Number of pairs in the Map: 3
-> Size of Map: 10
-> 
-> Pair(4,Computer)inserted successfully
-> The Load_Factor is：0.4
-> Number of pairs in the Map: 4
-> Size of Map: 10
-> 
-> 
-> ***Rehashing Ended***
-> 
-> New Size of Map: 10
-> 
-> Number of pairs in the Map: 4
-> Size of Map: 10
-> 
-> Current HashMap:
-> key = 1, val = Geeks
-> key = 2, val = forGeeks
-> key = 3, val = A
-> key = 4, val = Computer
-> 
-> Pair(5,Portal)inserted successfully
-> The Load_Factor is：0.5
-> Number of pairs in the Map: 5
-> Size of Map: 10
-> 
-> Current HashMap:
-> key = 1, val = Geeks
-> key = 2, val = forGeeks
-> key = 3, val = A
-> key = 4, val = Computer
-> key = 5, val = Portal
-> 
-> 
-> Process finished with exit code 0
-
-
+###### HashMap created
+###### Number of pairs in the Map: 0
+###### Size of Map: 5
+###### Default Load Factor : 0.75
+###### 
+###### Pair(1,Geeks)inserted successfully
+###### The Load_Factor is：0.2
+###### Number of pairs in the Map: 1
+###### Size of Map: 5
+###### 
+###### Current HashMap:
+###### key = 1, val = Geeks
+###### 
+###### Pair(2,forGeeks)inserted successfully
+###### The Load_Factor is：0.4
+###### Number of pairs in the Map: 2
+###### Size of Map: 5
+###### 
+###### Current HashMap:
+###### key = 1, val = Geeks
+###### key = 2, val = forGeeks
+###### 
+###### Pair(3,A)inserted successfully
+###### The Load_Factor is：0.6
+###### Number of pairs in the Map: 3
+###### Size of Map: 5
+###### 
+###### Current HashMap:
+###### key = 1, val = Geeks
+###### key = 2, val = forGeeks
+###### key = 3, val = A
+###### 
+###### Pair(4,Computer)inserted successfully
+###### The Load_Factor is：0.8
+###### 0.8 is greater than 0.75
+###### Therefore Rehashing will be done.
+###### 
+###### 
+###### ***Rehashing Started***
+###### 
+###### Pair(1,Geeks)inserted successfully
+###### The Load_Factor is：0.1
+###### Number of pairs in the Map: 1
+###### Size of Map: 10
+###### 
+###### Pair(2,forGeeks)inserted successfully
+###### The Load_Factor is：0.2
+###### Number of pairs in the Map: 2
+###### Size of Map: 10
+###### 
+###### Pair(3,A)inserted successfully
+###### The Load_Factor is：0.3
+###### Number of pairs in the Map: 3
+###### Size of Map: 10
+###### 
+###### Pair(4,Computer)inserted successfully
+###### The Load_Factor is：0.4
+###### Number of pairs in the Map: 4
+###### Size of Map: 10
+###### 
+###### 
+###### ***Rehashing Ended***
+###### 
+###### New Size of Map: 10
+###### 
+###### Number of pairs in the Map: 4
+###### Size of Map: 10
+###### 
+###### Current HashMap:
+###### key = 1, val = Geeks
+###### key = 2, val = forGeeks
+###### key = 3, val = A
+###### key = 4, val = Computer
+###### 
+###### Pair(5,Portal)inserted successfully
+###### The Load_Factor is：0.5
+###### Number of pairs in the Map: 5
+###### Size of Map: 10
+###### 
+###### Current HashMap:
+###### key = 1, val = Geeks
+###### key = 2, val = forGeeks
+###### key = 3, val = A
+###### key = 4, val = Computer
+###### key = 5, val = Portal
