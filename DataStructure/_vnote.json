@@ -24,6 +24,9 @@
         },
         {
             "name": "Hashing Data Structure"
+        },
+        {
+            "name": "Queue"
         }
     ],
     "version": "1"
