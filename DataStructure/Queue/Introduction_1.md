@@ -21,4 +21,109 @@
 >2. 当数据异步(数据的接和收不在同一个速率)转移在不同处理器的时候，例如IO缓冲，文件IO等
 
 ## 使用数组实现队列
->对于实现队列，我们需要有两个指针，front和rear，一个元素入队
+>对于实现队列，我们需要有两个指针，front和rear，一个元素从rear入队，一个元素中front出队，
+>如果我们只是单纯的增加front和rear指针，可能会出现一些问题，front指针可能会越过数组下标，
+>解决这个问题的办法是循环增加front和rear。
+
+
+## c++完整代码实现
+```c++
+    //CPP program for array implementation of queue
+    #include <iostream>
+    #include <cstdlib>
+    #include <limits>
+
+    using namespace std;
+
+    class Queue {
+    public:
+    	int front, rear, size;
+    	unsigned capacity;
+    	int* array;
+    };
+
+    Queue *createQueue(unsigned capacity)
+    {
+    	Queue* queue = new Queue();
+    	queue->capacity = capacity;
+    	queue->front = queue->size = 0;
+    	queue->rear = capacity - 1;//this is important, see the enqueue
+    	queue->array = new int[(queue->capacity * sizeof(int))];
+    	return queue;
+    }
+
+    //Queue is full when size becomes equal to the capacity
+    int isFull(Queue * queue)
+    {
+    	return (queue->size == queue->capacity);
+    }
+
+    //queue is empty when size is 0
+    int isEmpty(Queue * queue)
+    {
+    	return (queue->size == 0);
+    }
+
+    //function to add an item to the queue,it chages rear and front
+    void enqueue(Queue * queue,int item)
+    {
+    	if (isFull(queue))
+    	{
+    		return;
+    	}
+    	// "%" priority higher than "+"
+    	queue->rear = (queue->rear + 1) % queue->capacity;
+    	queue->array[queue->rear] = item;
+    	queue->size = queue->size + 1;
+    	cout << item << "enqueued to queue\n";
+    }
+
+    //function to remove an item from queue
+    int dequeue(Queue* queue) {
+    	if (isEmpty(queue))
+    	{
+    		return INT_MIN;
+    	}
+    	int item = queue->array[queue->front];
+    	queue->front = (queue->front + 1) % queue->capacity;
+    	queue->size = queue->size - 1;
+    	return item; 
+    }
+
+    //function to get rear of queue
+    int front(Queue* queue) {
+    	if (isEmpty(queue)) {
+    		return INT_MIN;
+    	}
+    	return queue->array[queue->front];
+    }
+
+    //function to get rear of queue
+    int rear(Queue* queue) {
+    	if (isEmpty(queue))
+    	{
+    		return INT_MIN;
+    	}
+    	return queue->array[queue->rear];
+    }
+
+    int main()
+    {
+    	Queue* queue = createQueue(1000);
+
+    	enqueue(queue, 10);
+    	enqueue(queue, 20);
+    	enqueue(queue, 30);
+    	enqueue(queue, 40);
+
+    	cout << dequeue(queue) << " dequeued from queue\n";
+
+    	cout << "Front item is " << front(queue) << endl;
+    	cout << "Rear item is " << rear(queue) << endl;
+
+    	return 0;
+    }
+```
+
+## 代码运行结果
+![队列效果](_v_images/20190326224324983_3411.png)
