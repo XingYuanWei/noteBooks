@@ -1,0 +1,5 @@
+vnote_backup_file_826537664 F:/VNote/DataStructure/Queue/Circular Queue other version_6.md
+## 实现循环队列的另一个方法
+
+>同上一篇一样，循环队列还是要有两个参数，front和rear。
+>循环队列各个参数的意义

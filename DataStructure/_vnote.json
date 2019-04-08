@@ -27,6 +27,9 @@
         },
         {
             "name": "Queue"
+        },
+        {
+            "name": "Tree"
         }
     ],
     "version": "1"
