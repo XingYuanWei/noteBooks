@@ -30,6 +30,9 @@
         },
         {
             "name": "Tree"
+        },
+        {
+            "name": "Graph"
         }
     ],
     "version": "1"
